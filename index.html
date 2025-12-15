@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Home Painting Massachusetts | Innov Builders | Free Estimate</title>
+    <meta name="description" content="Transform your home with professional painting services. No mess, no smell, no disruption. Perfect timing while you travel for the holidays. Call +1 (978) 871-1356">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000000;
+            overflow-x: hidden;
+        }
+
+        /* HEADER STYLES */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 195, 0, 0.2);
+            height: 116px;
+            transform: translatex(0px) translatey(0px);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .sticky-header .header-container {
+            transform: translatex(64px) translatey(0px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #FFC300;
+        }
+
+        .logo img {
+            height: 90px;
+            width: auto;
+        }
+
+        .header-container .logo img {
+            display: inline-block;
+            transform: translatex(64px) translatey(0px);
+            margin-top: -21px;
+            height: 122px;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-header {
+            background: #FFC300;
+            color: #000;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-header:hover {
+            background: #e6af00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 195, 0, 0.3);
+        }
+
+        .btn-primary {
+            background: #FFC300;
+            color: #000;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background: #e6af00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 195, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 15px 35px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* HERO SECTION - ATTENTION (AIDA) */
+        .hero-video {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0;
+            transform: scale(1);
+            transition: opacity 1.5s ease-in-out, transform 5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.65));
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #FFC300;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        .hero-location {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* HERO FORM */
+        .hero-form {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 450px;
+            min-width: 400px;
+            flex-shrink: 0;
+            margin: 0;
+            border: 2px solid rgba(255, 195, 0, 0.3);
+        }
+
+        .hero-form .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .hero-form .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #FFC300;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .hero-form .form-group input,
+        .hero-form .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255, 195, 0, 0.3);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .hero-form .form-group input:focus,
+        .hero-form .form-group select:focus {
+            outline: none;
+            border-color: #FFC300;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-form .submit-btn {
+            width: 100%;
+            background: #FFC300;
+            color: #000;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hero-form .submit-btn:hover {
+            background: #e6af00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 195, 0, 0.4);
+        }
+
+        /* INTEREST SECTION - Painting Benefits */
+        .benefits {
+            background: linear-gradient(135deg, #0a0a0a, #000);
+            padding: 100px 0;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFC300;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .benefits-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .benefits-list li i {
+            color: #FFC300;
+            margin-right: 15px;
+            font-size: 1.4rem;
+            margin-top: 3px;
+        }
+
+        .benefits-image {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            height: 450px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 195, 0, 0.2);
+        }
+
+        .benefits-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        /* DESIRE SECTION - Portfolio/Before-After */
+        .portfolio {
+            padding: 100px 0;
+            background: #000;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .portfolio-item {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 195, 0, 0.1);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 195, 0, 0.2);
+        }
+
+        .before-after-slider {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            cursor: col-resize;
+            user-select: none;
+        }
+
+        .before-after-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before-image {
+            z-index: 1;
+        }
+
+        .after-image {
+            z-index: 2;
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #FFC300;
+            z-index: 3;
+            cursor: col-resize;
+            transform: translateX(-50%);
+        }
+
+        .slider-handle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            background: #FFC300;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #000;
+        }
+
+        .slider-handle::after {
+            content: '⟷';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .before-after-labels {
+            position: absolute;
+            top: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        .before-label,
+        .after-label {
+            background: rgba(0, 0, 0, 0.85);
+            color: #FFC300;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .portfolio-info {
+            padding: 25px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #FFC300;
+        }
+
+        .portfolio-info p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0a0a0a, #000);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 195, 0, 0.05);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 195, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            background: rgba(255, 195, 0, 0.1);
+            border-color: #FFC300;
+            transform: translateY(-5px);
+        }
+
+        .process-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: #FFC300;
+            color: #000;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #FFC300;
+        }
+
+        .process-step p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* ACTION SECTION - CTA Form */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #FFC300;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .urgency-text {
+            font-size: 1.4rem;
+            color: #FFC300;
+            font-weight: 600;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 195, 0, 0.1);
+            border-radius: 10px;
+            border: 2px solid rgba(255, 195, 0, 0.3);
+        }
+
+        /* CONTACT FORM */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid rgba(255, 195, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #FFC300;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 195, 0, 0.3);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #FFC300;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #FFC300;
+            color: #000;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #e6af00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 195, 0, 0.4);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #000;
+            padding: 60px 0 30px;
+            border-top: 2px solid rgba(255, 195, 0, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #FFC300;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #FFC300;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            color: #FFC300;
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 195, 0, 0.1);
+            border: 2px solid rgba(255, 195, 0, 0.3);
+            border-radius: 50%;
+            color: #FFC300;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #FFC300;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 195, 0, 0.1);
+            color: #666;
+        }
+
+        /* FLOATING CALL BUTTON */
+        .floating-call {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #FFC300;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.8rem;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(255, 195, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .floating-call:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(255, 195, 0, 0.7);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(255, 195, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(255, 195, 0, 0.8);
+            }
+        }
+
+        .floating-call-text {
+            position: absolute;
+            right: 75px;
+            background: #000;
+            color: #FFC300;
+            padding: 10px 20px;
+            border-radius: 25px;
+            white-space: nowrap;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 2px solid #FFC300;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .floating-call:hover .floating-call-text {
+            opacity: 1;
+        }
+
+        /* NAME MODAL */
+        .name-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .name-modal.show {
+            display: flex;
+        }
+
+        .name-modal-content {
+            background: #1a1a1a;
+            border: 2px solid #FFC300;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(255, 195, 0, 0.3);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .name-modal h3 {
+            color: #FFC300;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .name-modal p {
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .name-modal input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #000;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .name-modal input:focus {
+            outline: none;
+            border-color: #FFC300;
+        }
+
+        .name-modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .name-modal-buttons button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .name-modal-buttons .btn-confirm {
+            background: #FFC300;
+            color: #000;
+        }
+
+        .name-modal-buttons .btn-confirm:hover {
+            background: #e6af00;
+            transform: translateY(-2px);
+        }
+
+        .name-modal-buttons .btn-cancel {
+            background: transparent;
+            border: 2px solid #666;
+            color: #fff;
+        }
+
+        .name-modal-buttons .btn-cancel:hover {
+            border-color: #fff;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 974px) {
+            .header-container .header-cta a {
+                transform: translatex(10px) translatey(0px);
+            }
+            
+            .header-container .logo img {
+                transform: translatex(44px) translatey(0px) !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-video {
+                height: auto;
+                min-height: 100vh;
+                padding: 150px 0 80px;
+            }
+
+            .hero-overlay {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-form {
+                min-width: auto;
+                width: 100%;
+                max-width: 100%;
+                padding: 30px 25px;
+                margin-top: 30px;
+            }
+
+            .hero-form .form-group {
+                margin-bottom: 25px;
+            }
+
+            .hero-form .form-group input,
+            .hero-form .form-group select {
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            .hero-form .submit-btn {
+                padding: 18px;
+                font-size: 1.1rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .cta-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-container .logo img {
+                padding-right: 300px;
+                transform: translatex(-6px) translatey(0px) !important;
+            }
+            
+            .header-container .header-cta a {
+                transform: translatex(20px) translatey(-100px);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- STICKY HEADER -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo innov builders.jpg" alt="Innov Builders" onerror="this.style.display='none'">
+            </div>
+            <div class="header-cta">
+                <a href="tel:+19788711356" class="btn-header" aria-label="Call +1 (978) 871-1356">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION - ATTENTION (AIDA) -->
+    <section class="hero-video">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1600');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1600');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1600');"></div>
+        </div>
+        
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Traveling for the Holidays?</h1>
+                <p class="hero-subtitle">That's Actually the Best Time to Repaint Your Home</p>
+                <p class="hero-description">
+                    <strong>No smell. No mess. No disruption while you're here.</strong><br>
+                    You leave, we refresh everything, and you come back to a clean, updated space.
+                </p>
+                <p class="hero-description">
+                    Professional painting services in Massachusetts & New Hampshire.<br>
+                    Expert craftsmanship with 11+ years of experience.
+                </p>
+            </div>
+            
+            <form class="hero-form" id="heroContactForm">
+                <div class="form-group">
+                    <label for="hero-name">Full Name *</label>
+                    <input type="text" id="hero-name" name="name" required placeholder="John Smith">
+                </div>
+                
+                <div class="form-group">
+                    <label for="hero-email">Email Address *</label>
+                    <input type="email" id="hero-email" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="hero-phone">Phone Number *</label>
+                    <input type="tel" id="hero-phone" name="phone" required placeholder="+1 (978) 123-4567">
+                </div>
+                
+                <div class="form-group">
+                    <label for="hero-service">Service Needed *</label>
+                    <select id="hero-service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="interior">Interior Painting</option>
+                        <option value="exterior">Exterior Painting</option>
+                        <option value="both">Both Interior & Exterior</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Get My Free Estimate Now
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- INTEREST SECTION - Benefits of Holiday Painting -->
+    <section class="benefits">
+        <div class="section">
+            <h2 class="section-title">Why Paint During Your Holiday Travel?</h2>
+            <p class="section-subtitle">Skip the hassle and return to a beautifully refreshed home</p>
+            
+            <div class="benefits-grid">
+                <div class="benefits-content">
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Zero Disruption:</strong> You're away enjoying the holidays while we transform your home. No need to move furniture or adjust your daily routine.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>No Paint Smell:</strong> Come home to a completely aired-out, fresh-smelling space. The paint smell is gone before you return.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Perfect Timing:</strong> Beat the spring rush and start the new year in a refreshed home. Holiday season = ideal painting conditions.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Professional Results:</strong> 11+ years of experience delivering flawless finishes. Premium paints, expert techniques, guaranteed satisfaction.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Complete Cleanup:</strong> We leave your home spotless. Every drop cloth removed, every surface protected, zero mess left behind.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="benefits-image">
+                    <img src="man-painting-walls-yellow.jpg" alt="Professional Painting" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIRE SECTION - Portfolio Before/After -->
+    <section class="portfolio">
+        <div class="section">
+            <h2 class="section-title">Recent Transformations</h2>
+            <p class="section-subtitle">See the quality that awaits your home</p>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
+                    <div class="before-after-slider" data-slider="1">
+                        <div class="before-after-labels">
+                            <span class="before-label">BEFORE</span>
+                            <span class="after-label">AFTER</span>
+                        </div>
+                        <img class="before-image" src="before and afters paint/after 1.png" alt="Before Painting">
+                        <img class="after-image" src="before and afters paint/before 1.png" alt="After Painting">
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Living Room Refresh</h3>
+                        <p>Complete interior repaint completed during family vacation</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
+                    <div class="before-after-slider" data-slider="2">
+                        <div class="before-after-labels">
+                            <span class="before-label">BEFORE</span>
+                            <span class="after-label">AFTER</span>
+                        </div>
+                        <img class="before-image" src="before and afters paint/after 2.png" alt="Before Painting">
+                        <img class="after-image" src="before and afters paint/before 2.png" alt="After Painting">
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Kitchen & Dining Area</h3>
+                        <p>Modern color update while homeowners traveled</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item">
+                    <div class="before-after-slider" data-slider="3">
+                        <div class="before-after-labels">
+                            <span class="before-label">BEFORE</span>
+                            <span class="after-label">AFTER</span>
+                        </div>
+                        <img class="before-image" src="before and afters paint/after 3.png" alt="Before Painting">
+                        <img class="after-image" src="before and afters paint/before 3.png" alt="After Painting">
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Master Bedroom Suite</h3>
+                        <p>Calming color palette transformation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <div class="section">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Simple, stress-free process from start to finish</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Free Estimate</h3>
+                    <p>Contact us today for a detailed quote. We'll assess your project and provide transparent pricing.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Schedule Your Dates</h3>
+                    <p>Tell us when you're traveling. We coordinate the perfect timeline for your holiday plans.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>You Travel, We Paint</h3>
+                    <p>Enjoy your vacation worry-free while our expert team transforms your home.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Return to Beauty</h3>
+                    <p>Come home to a freshly painted, clean, and beautifully updated space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTION SECTION - CTA Form (AIDA) -->
+    <section class="cta-section" id="contact-form">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Start the New Year Fresh?</h2>
+            <p class="cta-subtitle">
+                Don't miss this opportunity. If you want your repaint done before the new year hits, the time to act is now.
+            </p>
+            <div class="urgency-text">
+                <i class="fas fa-clock"></i> Limited Holiday Slots Available – Book Before December 20th
+            </div>
+
+            <form class="contact-form" id="mainContactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+1 (978) 123-4567">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Needed *</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="interior">Interior Painting</option>
+                        <option value="exterior">Exterior Painting</option>
+                        <option value="both">Both Interior & Exterior</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Get My Free Estimate Now
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Innov Builders</h3>
+                <p>Professional painting services in Massachusetts & New Hampshire. Transforming homes with expert craftsmanship since 2014.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#">Interior Painting</a>
+                <a href="#">Exterior Painting</a>
+                <a href="#">Kitchen Remodeling</a>
+                <a href="#">Custom Built-ins</a>
+                <a href="#">Stair Remodeling</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+19788711356" style="color: inherit; text-decoration: none;">+1 (978) 871-1356</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@innovbuilders.com">info@innovbuilders.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Massachusetts & New Hampshire</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="section">
+                <p>&copy; 2025 Innov Builders. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">
+                    <a href="tel:+19788711356" style="color: #FFC300; text-decoration: none; font-weight: 600;">
+                        Call +1 (978) 871-1356
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CALL BUTTON -->
+    <a class="floating-call" id="floatingCall" href="tel:+19788711356" aria-label="Call Innov Builders">
+        <i class="fas fa-phone"></i>
+        <div class="floating-call-text" id="floatingText">Talk to us right now</div>
+    </a>
+
+    <!-- NAME MODAL -->
+    <div class="name-modal" id="nameModal">
+        <div class="name-modal-content">
+            <h3><i class="fas fa-phone"></i> Before you call us...</h3>
+            <p>Please tell us your name:</p>
+            <input type="text" id="nameInput" placeholder="Enter your name" autocomplete="name">
+            <div class="name-modal-buttons">
+                <button class="btn-confirm" id="confirmCall">
+                    <i class="fas fa-phone"></i> Call Now
+                </button>
+                <button class="btn-cancel" id="cancelCall">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hero Slider
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000);
+
+        // Before/After Slider
+        document.querySelectorAll('.before-after-slider').forEach(slider => {
+            const afterImage = slider.querySelector('.after-image');
+            const handle = slider.querySelector('.slider-handle');
+            let isDragging = false;
+
+            function updateSlider(e) {
+                const rect = slider.getBoundingClientRect();
+                const x = (e.clientX || e.touches[0].clientX) - rect.left;
+                const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                
+                afterImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+            }
+
+            slider.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                updateSlider(e);
+            });
+
+            slider.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                updateSlider(e);
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) updateSlider(e);
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) updateSlider(e);
+            });
+
+            document.addEventListener('mouseup', () => isDragging = false);
+            document.addEventListener('touchend', () => isDragging = false);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Function to detect platform from URL
+        function detectPlatform() {
+            const url = window.location.href.toLowerCase();
+            if (url.includes('google')) return 'GOOGLE ADS';
+            if (url.includes('meta') || url.includes('facebook') || url.includes('instagram')) return 'META';
+            return 'ORGANIC';
+        }
+
+        // Function to get page source
+        function getPageSource() {
+            return document.title || 'Professional Home Painting Massachusetts | Innov Builders';
+        }
+
+        // Function to send data to Make.com webhook
+        async function sendToWebhook(formData) {
+            const webhookUrl = 'https://hook.us2.make.com/ctp3mh229k0mi9ujiy1xcu1xh84fpa3x';
+            
+            const payload = {
+                NOME: formData.name,
+                EMAIL: formData.email,
+                TELEFONE: formData.phone,
+                PERGUNTA: formData.service,
+                PLATAFORMA: detectPlatform(),
+                FONTE: getPageSource(),
+                QUANDO: new Date().toISOString()
+            };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    console.log('Data sent successfully to webhook');
+                    window.location.href = 'thank-you.html';
+                } else {
+                    throw new Error('Webhook response not OK');
+                }
+            } catch (error) {
+                console.error('Error sending to webhook:', error);
+                // Still redirect to thank you page even if webhook fails
+                window.location.href = 'thank-you.html';
+            }
+        }
+
+        // Form submission
+        document.getElementById('mainContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            sendToWebhook(data);
+        });
+
+        // Hero form submission
+        document.getElementById('heroContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            sendToWebhook(data);
+        });
+
+        // NAME MODAL FUNCTIONALITY
+        const nameModal = document.getElementById('nameModal');
+        const nameInput = document.getElementById('nameInput');
+        const confirmCallBtn = document.getElementById('confirmCall');
+        const cancelCallBtn = document.getElementById('cancelCall');
+        let pendingPhoneNumber = '';
+
+        // Function to show modal
+        function showNameModal(phoneNumber) {
+            pendingPhoneNumber = phoneNumber;
+            nameModal.classList.add('show');
+            nameInput.value = '';
+            setTimeout(() => nameInput.focus(), 300);
+        }
+
+        // Function to hide modal
+        function hideNameModal() {
+            nameModal.classList.remove('show');
+            pendingPhoneNumber = '';
+        }
+
+        // Intercept all tel: links
+        function setupCallInterception() {
+            const telLinks = document.querySelectorAll('a[href^="tel:"]');
+            console.log('Found', telLinks.length, 'tel links');
+            telLinks.forEach(function(el) {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const phoneNumber = el.getAttribute('href');
+                    console.log('Phone link clicked:', phoneNumber);
+                    showNameModal(phoneNumber);
+                }, true); // Use capture phase
+            });
+        }
+
+        // Setup call interception on page load
+        setupCallInterception();
+
+        // Confirm call button
+        confirmCallBtn.addEventListener('click', function() {
+            const userName = nameInput.value.trim();
+            
+            if (!userName) {
+                nameInput.style.borderColor = '#ff4444';
+                nameInput.placeholder = 'Please enter your name';
+                nameInput.focus();
+                return;
+            }
+
+            // Store phone number before hiding modal
+            const phoneToCall = pendingPhoneNumber;
+            
+            console.log('User name:', userName);
+            console.log('Phone to call:', phoneToCall);
+
+            // Send call data to webhook
+            const callData = {
+                NOME: userName,
+                EMAIL: '',
+                TELEFONE: phoneToCall.replace('tel:', ''),
+                PERGUNTA: 'Phone Call',
+                PLATAFORMA: detectPlatform(),
+                FONTE: getPageSource(),
+                QUANDO: new Date().toISOString()
+            };
+
+            fetch('https://hook.us2.make.com/ctp3mh229k0mi9ujiy1xcu1xh84fpa3x', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(callData)
+            }).catch(error => console.error('Error sending call data:', error));
+
+            // Store name in localStorage
+            localStorage.setItem('userName', userName);
+            
+            // Hide modal
+            hideNameModal();
+            
+            // Make the call after a small delay
+            setTimeout(() => {
+                console.log('Making call to:', phoneToCall);
+                if (phoneToCall) {
+                    window.location.href = phoneToCall;
+                } else {
+                    console.error('No phone number to call!');
+                }
+            }, 300);
+        });
+
+        // Cancel button
+        cancelCallBtn.addEventListener('click', hideNameModal);
+
+        // Close modal on background click
+        nameModal.addEventListener('click', function(e) {
+            if (e.target === nameModal) {
+                hideNameModal();
+            }
+        });
+
+        // Allow Enter key to submit
+        nameInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                confirmCallBtn.click();
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.sticky-header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(0, 0, 0, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(255, 195, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

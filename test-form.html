@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Test | Innov Builders Painting</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            color: #fff;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #FFC300;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 195, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #FFC300;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .required {
+            color: #ff4444;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 195, 0, 0.3);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #FFC300;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px rgba(255, 195, 0, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #FFC300;
+            color: #000;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #e6af00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 195, 0, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-info {
+            background: rgba(255, 195, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 195, 0, 0.3);
+        }
+
+        .form-info h3 {
+            color: #FFC300;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .form-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .form-info li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-info li i {
+            color: #FFC300;
+        }
+
+        .success-message,
+        .error-message {
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success-message {
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid rgba(0, 255, 0, 0.3);
+            color: #00ff00;
+        }
+
+        .error-message {
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            color: #ff4444;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #FFC300;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #e6af00;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Landing Page
+        </a>
+
+        <div class="header">
+            <h1><i class="fas fa-vial"></i> Contact Form Test</h1>
+            <p>Test the form functionality and validation</p>
+        </div>
+
+        <div class="form-info">
+            <h3><i class="fas fa-info-circle"></i> Form Testing Info</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> All required fields are validated</li>
+                <li><i class="fas fa-check"></i> Email format is checked</li>
+                <li><i class="fas fa-check"></i> Phone number format is validated</li>
+                <li><i class="fas fa-check"></i> Form data is logged to console</li>
+                <li><i class="fas fa-check"></i> Success message displays after submission</li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <form id="testForm">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+1 (978) 123-4567" pattern="[\+]?[0-9\s\(\)\-]+">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Property Address</label>
+                    <input type="text" id="address" name="address" placeholder="123 Main St, Boston, MA 02101">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Needed <span class="required">*</span></label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="interior">Interior Painting</option>
+                        <option value="exterior">Exterior Painting</option>
+                        <option value="both">Both Interior & Exterior</option>
+                        <option value="commercial">Commercial Painting</option>
+                        <option value="other">Other (specify in message)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="travelDates">Travel Dates (when you'll be away)</label>
+                    <input type="text" id="travelDates" name="travelDates" placeholder="e.g., December 20-30, 2025">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Project Details & Additional Information</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your project, number of rooms, color preferences, etc."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Test Form
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> <strong>Success!</strong> Form submitted successfully. Check the console for form data.
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i> <strong>Error!</strong> Please fill in all required fields correctly.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('testForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Validate form
+            if (!form.checkValidity()) {
+                errorMessage.style.display = 'block';
+                form.reportValidity();
+                return;
+            }
+            
+            // Get form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Log to console
+            console.log('=== FORM SUBMISSION TEST ===');
+            console.log('Form Data:', data);
+            console.log('Timestamp:', new Date().toISOString());
+            console.log('===========================');
+            
+            // Show success message
+            successMessage.style.display = 'block';
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                if (confirm('Form test successful! Reset the form for another test?')) {
+                    form.reset();
+                    successMessage.style.display = 'none';
+                }
+            }, 2000);
+        });
+
+        // Real-time validation feedback
+        const inputs = form.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value) {
+                    this.style.borderColor = '#ff4444';
+                } else if (this.type === 'email' && this.value && !this.validity.valid) {
+                    this.style.borderColor = '#ff4444';
+                } else if (this.type === 'tel' && this.value && !this.validity.valid) {
+                    this.style.borderColor = '#ff4444';
+                } else {
+                    this.style.borderColor = 'rgba(255, 195, 0, 0.3)';
+                }
+            });
+
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#FFC300';
+            });
+        });
+
+        // Auto-format phone number (optional)
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    e.target.value = `(${value}`;
+                } else if (value.length <= 6) {
+                    e.target.value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    e.target.value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
