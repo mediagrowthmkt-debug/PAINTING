@@ -1434,10 +1434,7 @@
 
         // Function to detect platform from URL
         function detectPlatform() {
-            const url = window.location.href.toLowerCase();
-            if (url.includes('google')) return 'GOOGLE ADS';
-            if (url.includes('meta') || url.includes('facebook') || url.includes('instagram')) return 'META';
-            return 'ORGANIC';
+            return 'META';
         }
 
         // Function to get page source
@@ -1485,6 +1482,16 @@
         document.getElementById('mainContactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Track Lead event on Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Main Contact Form Submission',
+                    content_category: 'Home Improvement',
+                    value: 0,
+                    currency: 'USD'
+                });
+            }
+            
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
@@ -1495,6 +1502,16 @@
         // Hero form submission
         document.getElementById('heroContactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Track Lead event on Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Hero Form Submission',
+                    content_category: 'Home Improvement',
+                    value: 0,
+                    currency: 'USD'
+                });
+            }
             
             // Get form data
             const formData = new FormData(this);
@@ -1550,6 +1567,16 @@
                 nameInput.placeholder = 'Please enter your name';
                 nameInput.focus();
                 return;
+            }
+
+            // Track Lead event on Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Phone Call Request',
+                    content_category: 'Home Improvement',
+                    value: 0,
+                    currency: 'USD'
+                });
             }
 
             // Store phone number before hiding modal
