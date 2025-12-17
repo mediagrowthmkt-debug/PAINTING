@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- LAST UPDATE: 2025-12-17 15:55 - PLATFORM FIXED TO META -->
     <title>Professional Home Painting Massachusetts | Innov Builders | Free Estimate</title>
-    <meta name="description" content="Transform your home with professional painting services. No mess, no smell, no disruption. Perfect timing while you travel for the holidays.">
+    <meta name="description" content="Transform your home with professional painting services. No mess, no smell, no disruption. Perfect timing while you travel for the holidays. Call +1 (978) 871-1356">
     
     <!-- Meta Pixel Code -->
     <script>
@@ -1054,6 +1058,11 @@
             <div class="logo">
                 <img src="logo innov builders.jpg" alt="Innov Builders" onerror="this.style.display='none'">
             </div>
+            <div class="header-cta">
+                <a href="tel:+19788711356" class="btn-header" aria-label="Call +1 (978) 871-1356">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
         </div>
     </header>
 
@@ -1297,6 +1306,11 @@
             <div class="footer-section">
                 <h3>Innov Builders</h3>
                 <p>Professional painting services in Massachusetts & New Hampshire. Transforming homes with expert craftsmanship since 2014.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
             
             <div class="footer-section">
@@ -1310,6 +1324,14 @@
             
             <div class="footer-section">
                 <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+19788711356" style="color: inherit; text-decoration: none;">+1 (978) 871-1356</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@innovbuilders.com">info@innovbuilders.com</a>
+                </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Massachusetts & New Hampshire</span>
@@ -1414,11 +1436,6 @@
             });
         });
 
-        // Function to detect platform from URL
-        function detectPlatform() {
-            return 'META';
-        }
-
         // Function to get page source
         function getPageSource() {
             return document.title || 'Professional Home Painting Massachusetts | Innov Builders';
@@ -1433,7 +1450,7 @@
                 EMAIL: formData.email,
                 TELEFONE: formData.phone,
                 PERGUNTA: formData.service,
-                PLATAFORMA: detectPlatform(),
+                PLATAFORMA: 'META',
                 FONTE: getPageSource(),
                 QUANDO: new Date().toISOString()
             };
@@ -1464,16 +1481,6 @@
         document.getElementById('mainContactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Track Lead event on Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    content_name: 'Main Contact Form Submission',
-                    content_category: 'Home Improvement',
-                    value: 0,
-                    currency: 'USD'
-                });
-            }
-            
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
@@ -1484,16 +1491,6 @@
         // Hero form submission
         document.getElementById('heroContactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Track Lead event on Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    content_name: 'Hero Form Submission',
-                    content_category: 'Home Improvement',
-                    value: 0,
-                    currency: 'USD'
-                });
-            }
             
             // Get form data
             const formData = new FormData(this);
@@ -1533,14 +1530,14 @@
                     const phoneNumber = el.getAttribute('href');
                     console.log('Phone link clicked:', phoneNumber);
                     showNameModal(phoneNumber);
-                }, true); // Use capture phase
+                }, true);
             });
         }
 
         // Setup call interception on page load
         setupCallInterception();
 
-        // Confirm call button
+        // Confirm call button - Send only NAME to webhook
         confirmCallBtn.addEventListener('click', function() {
             const userName = nameInput.value.trim();
             
@@ -1551,32 +1548,30 @@
                 return;
             }
 
-            // Track Lead event on Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    content_name: 'Phone Call Request',
-                    content_category: 'Home Improvement',
-                    value: 0,
-                    currency: 'USD'
-                });
-            }
-
-            // Store phone number before hiding modal
             const phoneToCall = pendingPhoneNumber;
             
             console.log('User name:', userName);
             console.log('Phone to call:', phoneToCall);
 
-            // Send call data to webhook
+            // PAINTING WEBHOOK - LAST UPDATE: 2025-12-17 15:55
+            // PLATFORM IS ALWAYS META - NO EXCEPTIONS
             const callData = {
                 NOME: userName,
-                EMAIL: '',
-                TELEFONE: phoneToCall.replace('tel:', ''),
-                PERGUNTA: 'Phone Call',
-                PLATAFORMA: detectPlatform(),
-                FONTE: getPageSource(),
+                PERGUNTA: 'LIGAÇÃO - Phone Call',
+                PLATAFORMA: 'META',
+                FONTE: document.title || 'Professional Home Painting Massachusetts',
                 QUANDO: new Date().toISOString()
             };
+
+            // FORCE VERIFICATION
+            if (callData.PLATAFORMA !== 'META') {
+                console.error('❌ ERROR: Platform is not META!');
+                callData.PLATAFORMA = 'META'; // Force it to be META
+            }
+
+            console.log('📤 PAINTING - Sending to webhook:', callData);
+            console.log('🎯 Platform confirmed: META');
+            console.log('⚠️ TIMESTAMP: 2025-12-17 15:55 - If you see this, cache is cleared!');
 
             fetch('https://hook.us2.make.com/ctp3mh229k0mi9ujiy1xcu1xh84fpa3x', {
                 method: 'POST',
@@ -1586,10 +1581,7 @@
                 body: JSON.stringify(callData)
             }).catch(error => console.error('Error sending call data:', error));
 
-            // Store name in localStorage
             localStorage.setItem('userName', userName);
-            
-            // Hide modal
             hideNameModal();
             
             // Make the call after a small delay
@@ -1613,7 +1605,7 @@
             }
         });
 
-        // Allow Enter key to submit
+        // Enter key to confirm
         nameInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 confirmCallBtn.click();
